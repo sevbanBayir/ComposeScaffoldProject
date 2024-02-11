@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeScaffoldProject"
 include(":app")
- 
+include(":core")
+include(":core:network")
