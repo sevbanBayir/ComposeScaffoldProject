@@ -6,8 +6,9 @@ import com.sevban.network.source.remote.RemoteDataSource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
+import javax.inject.Inject
 
-class RepositoryImpl (
+class RepositoryImpl @Inject constructor(
     private val remoteDataSource: RemoteDataSource
 ) : Repository {
     override fun getCharacterList(): Flow<List<Character>> = flow {
