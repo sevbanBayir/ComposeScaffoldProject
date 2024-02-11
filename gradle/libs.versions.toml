@@ -57,7 +57,8 @@ junit = { module = "junit:junit", version.ref = "junit" }
 
 material = { module = "com.google.android.material:material", version.ref = "material" }
 
-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitGson"}
+retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitGson"}
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitGson"}
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 [plugins]
