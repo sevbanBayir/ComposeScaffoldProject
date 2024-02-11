@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sevban.data"
+    namespace = "com.sevban.domain"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -34,8 +34,6 @@ android {
 }
 
 dependencies {
-    implementation(projects.core.model)
-    implementation(projects.core.network)
 
     implementation(libs.androidx.ktx)
     implementation(libs.appcompat)
