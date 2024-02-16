@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.sevban.home"
+    namespace = "com.sevban.detail"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -37,7 +37,7 @@ android {
         kotlinCompilerExtensionVersion = "1.5.9"
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = "1.8"
     }
 }
 
