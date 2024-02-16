@@ -24,6 +24,8 @@ hiltNavigation = "1.1.0"
 apollo = "3.8.2"
 ktlint = "12.1.0"
 org-jetbrains-kotlin-jvm = "1.9.22"
+appcompat = "1.6.1"
+navigation = "2.7.7"
 
 [libraries]
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
@@ -40,6 +42,7 @@ hilt-android-compiler = { module = "com.google.dagger:hilt-compiler", version.re
 hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigation" }
 
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
 androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -56,7 +59,9 @@ junit = { module = "junit:junit", version.ref = "junit" }
 
 material = { module = "com.google.android.material:material", version.ref = "material" }
 
-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitGson"}
+retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitGson"}
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitGson"}
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
@@ -66,6 +71,8 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 apollo = { id = "com.apollographql.apollo3", version.ref = "apollo" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 kotlin-parcelize = { id = "kotlin-parcelize"}
+java-library = { id = "java-library"}
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
+androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 
 

@@ -12,7 +12,14 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "ComposeScaffoldProject"
 include(":app")
- 
+include(":core")
+include(":core:network")
+include(":core:data")
+include(":core:model")
+include(":core:domain")
+include(":feature")
+include(":feature:home")
+include(":feature:detail")
