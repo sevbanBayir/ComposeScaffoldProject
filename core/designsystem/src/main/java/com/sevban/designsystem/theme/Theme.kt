@@ -1,4 +1,4 @@
-package com.sevban.composescaffoldproject.ui.theme
+package com.sevban.designsystem.theme
 
 import android.app.Activity
 import android.os.Build
