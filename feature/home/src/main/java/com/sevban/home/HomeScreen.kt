@@ -1,7 +1,10 @@
 package com.sevban.home
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -17,17 +20,22 @@ fun HomeScreenRoute(
 ) {
     val homeUiState by viewModel.uiState.collectAsStateWithLifecycle()
 
-    HomeScreen(homeUiState = homeUiState)
+    HomeScreen(homeUiState = homeUiState, onListItemClicked = onListItemClicked)
 }
 
 @Composable
 fun HomeScreen(
-    homeUiState: UiState
+    homeUiState: UiState,
+    onListItemClicked: (String) -> Unit,
 ) {
-    Box(
+    Column(
         modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text("Home Feature Screen")
+        Button(onClick = { onListItemClicked("5") }) {
+            Text(text = "Navigate to Detail")
+        }
     }
 }
