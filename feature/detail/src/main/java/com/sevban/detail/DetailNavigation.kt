@@ -31,7 +31,7 @@ fun NavGraphBuilder.detailScreen(
     onBackClick: () -> Unit,
 ) {
     composable(
-        route = "detail_route/{$ITEM_ID_ARG}",
+        route = "detail/{$ITEM_ID_ARG}",
         arguments = listOf(
             navArgument(ITEM_ID_ARG) { type = NavType.StringType },
         ),
