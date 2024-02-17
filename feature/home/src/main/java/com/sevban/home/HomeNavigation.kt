@@ -29,7 +29,7 @@ fun NavController.navigateToHome(itemId: String) {
 
 fun NavGraphBuilder.homeScreen(
     onBackClick: () -> Unit,
-//  onItemClick: (String) -> Unit,    -> keep hoisting...
+    onItemClick: (String) -> Unit,   // -> keep hoisting...
 ) {
     composable(
         route = "home_route/{$ITEM_ID_ARG}",

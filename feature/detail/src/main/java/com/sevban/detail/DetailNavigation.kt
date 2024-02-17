@@ -29,7 +29,6 @@ fun NavController.navigateToDetail(itemId: String) {
 
 fun NavGraphBuilder.detailScreen(
     onBackClick: () -> Unit,
-//  onItemClick: (String) -> Unit,    -> keep hoisting...
 ) {
     composable(
         route = "detail_route/{$ITEM_ID_ARG}",
