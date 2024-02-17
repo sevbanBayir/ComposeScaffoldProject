@@ -13,7 +13,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 @Composable
 fun HomeScreenRoute(
     viewModel: HomeViewModel = hiltViewModel(),
-//  onListItemClicked: () -> Unit     -> hoist navigation actions to appState's navController.
+    onListItemClicked: (String) -> Unit     //-> hoist navigation actions to appState's navController.
 ) {
     val homeUiState by viewModel.uiState.collectAsStateWithLifecycle()
 
