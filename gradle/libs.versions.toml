@@ -48,6 +48,7 @@ androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersi
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended-android"}
 
 okhttp3-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "okHttp" }
 okhttp3 = { module = "com.squareup.okhttp3:okhttp" }
