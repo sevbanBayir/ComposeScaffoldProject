@@ -5,6 +5,6 @@ import com.sevban.network.source.model.CharactersDTO
 import kotlinx.coroutines.flow.Flow
 
 interface RemoteDataSource {
-    suspend fun getAllCharacters(): Flow<CharactersDTO>
-    suspend fun getCharacterById(id: String): Flow<CharacterDTO>
+    fun getAllCharacters(): Flow<CharactersDTO>
+    fun getCharacterById(id: String): Flow<CharacterDTO>
 }

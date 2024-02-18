@@ -10,12 +10,12 @@ class RemoteDataSourceImpl @Inject constructor(
     private val apiService: RetrofitService
 ) : RemoteDataSource {
 
-    override suspend fun getAllCharacters(): Flow<CharactersDTO> = flow {
+    override fun getAllCharacters(): Flow<CharactersDTO> = flow {
         emit(apiService.getAllCharacters())
     }
 
 
-    override suspend fun getCharacterById(id: String): Flow<CharacterDTO> = flow {
-        emit(apiService.getCharacterById(id))
+    override fun getCharacterById(id: String): Flow<CharacterDTO> = flow {
+        emit(apiService.getCharacterById(id.toInt()))
     }
 }
