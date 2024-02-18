@@ -11,5 +11,5 @@ interface RetrofitService {
     suspend fun getAllCharacters(): CharactersDTO
 
     @GET("character/{id}")
-    suspend fun getCharacterById(@Path("id") id: String): CharacterDTO
+    suspend fun getCharacterById(@Path("id") id: Int): CharacterDTO
 }

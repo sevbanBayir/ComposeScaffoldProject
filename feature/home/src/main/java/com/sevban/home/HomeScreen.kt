@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.sevban.model.Character
 
 @Composable
 fun HomeScreenRoute(
@@ -19,13 +20,14 @@ fun HomeScreenRoute(
     onListItemClicked: (String) -> Unit     //-> hoist navigation actions to appState's navController.
 ) {
     val homeUiState by viewModel.uiState.collectAsStateWithLifecycle()
-
-    HomeScreen(homeUiState = homeUiState, onListItemClicked = onListItemClicked)
+    val character by viewModel.characterState.collectAsStateWithLifecycle()
+    HomeScreen(homeUiState = homeUiState, onListItemClicked = onListItemClicked, character = character)
 }
 
 @Composable
 fun HomeScreen(
     homeUiState: UiState,
+    character: Character? = null,
     onListItemClicked: (String) -> Unit,
 ) {
     Column(
@@ -37,5 +39,6 @@ fun HomeScreen(
         Button(onClick = { onListItemClicked("5") }) {
             Text(text = "Navigate to Detail")
         }
+        Text(text = character?.name ?: "Empty")
     }
 }
