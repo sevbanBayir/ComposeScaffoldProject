@@ -1,4 +1,4 @@
-package com.sevban.network.source.di
+package com.sevban.network.di
 
 import com.sevban.network.source.remote.RetrofitService
 import dagger.Module

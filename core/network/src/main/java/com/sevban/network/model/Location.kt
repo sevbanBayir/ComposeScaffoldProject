@@ -1,9 +1,9 @@
-package com.sevban.network.source.model
+package com.sevban.network.model
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Origin(
+data class Location(
     @SerializedName("name")
     val name: String?,
     @SerializedName("url")

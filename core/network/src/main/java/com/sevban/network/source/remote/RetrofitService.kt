@@ -1,7 +1,7 @@
 package com.sevban.network.source.remote
 
-import com.sevban.network.source.model.CharacterDTO
-import com.sevban.network.source.model.CharactersDTO
+import com.sevban.network.model.CharacterDTO
+import com.sevban.network.model.CharactersDTO
 import retrofit2.http.GET
 import retrofit2.http.Path
 

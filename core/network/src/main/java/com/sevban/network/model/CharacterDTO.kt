@@ -1,4 +1,4 @@
-package com.sevban.network.source.model
+package com.sevban.network.model
 
 
 import com.google.gson.annotations.SerializedName
