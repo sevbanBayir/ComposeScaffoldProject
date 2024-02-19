@@ -7,6 +7,8 @@ import com.sevban.composescaffoldproject.AppState
 import com.sevban.detail.detailScreen
 import com.sevban.detail.navigateToDetail
 import com.sevban.home.homeScreen
+import com.sevban.network.Failure
+import kotlinx.coroutines.launch
 
 /**
  * Top-level navigation graph. Navigation is organized as explained at
@@ -18,7 +20,7 @@ import com.sevban.home.homeScreen
 @Composable
 fun NavHost(
     appState: AppState,
-    onShowSnackbar: suspend (String, String?) -> Boolean,
+    onShowSnackbar: suspend (Failure, String?) -> Unit,
     modifier: Modifier = Modifier,
     startDestination: String = Destination.HOME.route,
 ) {
@@ -28,7 +30,11 @@ fun NavHost(
         startDestination = startDestination,
         modifier = modifier,
     ) {
-        homeScreen(onItemClick = navController::navigateToDetail, onBackClick = navController::popBackStack)
-        detailScreen (onBackClick = navController::popBackStack)
+        homeScreen(
+            onItemClick = navController::navigateToDetail,
+            onBackClick = navController::popBackStack,
+            whenErrorOccured = onShowSnackbar
+        )
+        detailScreen(onBackClick = navController::popBackStack)
     }
 }
