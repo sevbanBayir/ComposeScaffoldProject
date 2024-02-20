@@ -34,7 +34,7 @@ class HomeViewModel @Inject constructor(
     private val _error = Channel<Failure>()
     val error = _error.receiveAsFlow()
 
-    val characterState: StateFlow<Character?> = getCharacterUseCase.execute("dfgdd")
+    val characterState: StateFlow<Character?> = getCharacterUseCase.execute("1")
         .handleFailures {
             _error.send(it)
         }
