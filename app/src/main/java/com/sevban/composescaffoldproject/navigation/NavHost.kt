@@ -10,13 +10,6 @@ import com.sevban.home.homeScreen
 import com.sevban.network.Failure
 import kotlinx.coroutines.launch
 
-/**
- * Top-level navigation graph. Navigation is organized as explained at
- * https://d.android.com/jetpack/compose/nav-adaptive
- *
- * The navigation graph defined in this file defines the different top level routes. Navigation
- * within each route is handled using state and Back Handlers.
- */
 @Composable
 fun NavHost(
     appState: AppState,
